@@ -1,7 +1,5 @@
-import { * } as actions from 'src/actions';
-import { * } as reducers from 'src/reducers';
-import color from 'src/utils/color';
+const reducers = require('./src/reducers');
+const actions = require('./src/actions');
+const color = require('./src/utils/color');
 
-export actions;
-export recucers;
-export color;
+module.exports = { actions, reducers, color };

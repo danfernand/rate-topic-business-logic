@@ -1,6 +1,5 @@
-import { ADD_TOPIC, INIT_TOPICS, VOTE_TOPIC } from './actions';
-
-import _ from 'lodash';
+const { ADD_TOPIC, INIT_TOPICS, VOTE_TOPIC } = require('./actions');
+const _ = require('lodash');
 
 function addTopic(state, action) {
   state.push({
@@ -49,4 +48,6 @@ function topics(state = [], action) {
   }
 }
 
-export const topicsReducer = topics;
+module.exports = {
+  topicsReducer: topics
+};
