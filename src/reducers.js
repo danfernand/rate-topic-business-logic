@@ -1,9 +1,15 @@
-const { ADD_TOPIC, INIT_TOPICS, VOTE_TOPIC } = require('./actions');
+const actions = require('./actions');
 const _ = require('lodash');
+const ADD_TOPIC = actions.ADD_TOPIC;
+const INIT_TOPICS = actions.INIT_TOPICS;
+const VOTE_TOPIC = actions.VOTE_TOPIC;
 
 function addTopic(state, action) {
+  const maxId = _.max(state.map((topic) => {
+    return topic.id;
+  }));
   state.push({
-    id: Number(_.uniqueId()),
+    id: maxId + 1,
     name: action.name,
     description: action.description,
     voteCount: 0,

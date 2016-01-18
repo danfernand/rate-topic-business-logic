@@ -1,6 +1,6 @@
 {
   "name": "rate-topic-business-logic",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "This repository contains all of the logic (reducers / actions / utilities) for my web and native (coming soon) implementations of a small rate-topic app.",
   "main": "index.js",
   "scripts": {
