@@ -1,3 +1,5 @@
+"use strict";
+
 const actions = require('./actions');
 const _ = require('lodash');
 const ADD_TOPIC = actions.ADD_TOPIC;
