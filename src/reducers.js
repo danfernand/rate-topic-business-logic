@@ -1,10 +1,5 @@
-"use strict";
-
-const actions = require('./actions');
+import { ADD_TOPIC, VOTE_TOPIC, INIT_TOPICS } from './actions';
 const _ = require('lodash');
-const ADD_TOPIC = actions.ADD_TOPIC;
-const INIT_TOPICS = actions.INIT_TOPICS;
-const VOTE_TOPIC = actions.VOTE_TOPIC;
 
 function addTopic(state, action) {
   const maxId = _.max(state.map((topic) => {
@@ -56,6 +51,4 @@ function topics(state = [], action) {
   }
 }
 
-module.exports = {
-  topicsReducer: topics
-};
+export const topicsReducer = topics;
